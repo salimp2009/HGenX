@@ -27,9 +27,15 @@
     <ClInclude Include="src\HGenX\EntryPoint.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\HGenX\Log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\HGenX\Application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\HGenX\Log.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

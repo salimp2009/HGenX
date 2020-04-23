@@ -7,21 +7,20 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sandbox", "Sandbox\Sandbox.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HGenX", "HGenX\HGenX.vcxproj", "{C8FA9248-C917-4C11-8E30-A6154DCF545D}"
 EndProject
-
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
 		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3667744D-B22D-4D60-9DB5-647C21F835CF}.Debug|x64.ActiveCfg = Debug|x64
+		{3667744D-B22D-4D60-9DB5-647C21F835CF}.Debug|x64.Build.0 = Debug|x64
+		{3667744D-B22D-4D60-9DB5-647C21F835CF}.Release|x64.ActiveCfg = Release|x64
+		{3667744D-B22D-4D60-9DB5-647C21F835CF}.Release|x64.Build.0 = Release|x64
 		{C8FA9248-C917-4C11-8E30-A6154DCF545D}.Debug|x64.ActiveCfg = Debug|x64
 		{C8FA9248-C917-4C11-8E30-A6154DCF545D}.Debug|x64.Build.0 = Debug|x64
 		{C8FA9248-C917-4C11-8E30-A6154DCF545D}.Release|x64.ActiveCfg = Release|x64
 		{C8FA9248-C917-4C11-8E30-A6154DCF545D}.Release|x64.Build.0 = Release|x64
-		{3667744D-B22D-4D60-9DB5-647C21F835CF}.Debug|x64.ActiveCfg = Release|x64
-		{3667744D-B22D-4D60-9DB5-647C21F835CF}.Debug|x64.Build.0 = Release|x64
-		{3667744D-B22D-4D60-9DB5-647C21F835CF}.Release|x64.ActiveCfg = Release|x64
-		{3667744D-B22D-4D60-9DB5-647C21F835CF}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

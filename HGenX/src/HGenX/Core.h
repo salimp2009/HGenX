@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 #ifdef HG_PLATFORM_WINDOWS
 	#ifdef HG_BUILD_DLL
 		#define HGenX_API __declspec(dllexport)

@@ -1,5 +1,8 @@
 
 #include <HGenx.h>
+#include "HGenX/EntryPoint.h"
+
+
 
 class Sandbox : public HGenx::Application
 {
