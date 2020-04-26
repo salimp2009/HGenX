@@ -15,6 +15,7 @@
 
 #bin files
 bin-int/
+!vendor/bin/premake/
 
 # Build results
 [Dd]ebug/
