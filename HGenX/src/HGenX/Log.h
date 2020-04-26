@@ -4,6 +4,7 @@
 #include "Core.h"
 #include "spdlog/spdlog.h"
 
+// revised gitignore 
 
 
 namespace HGenx {
