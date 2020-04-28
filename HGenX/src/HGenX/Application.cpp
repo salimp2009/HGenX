@@ -1,14 +1,12 @@
 #include "Application.h"
 
-
-
 namespace HGenx {
 
 	Application::Application() 
 	{
 	}
 	
-	
+
 	Application::~Application() 
 	{
 	}

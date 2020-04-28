@@ -19,6 +19,7 @@
       <Filter>HGenX</Filter>
     </ClInclude>
     <ClInclude Include="src\HGenx.h" />
+    <ClInclude Include="src\HGenX\Events\Event.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\HGenX\Application.cpp">

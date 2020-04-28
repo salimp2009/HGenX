@@ -27,6 +27,7 @@ project	"HGenX"
  
 	includedirs
 	{
+		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include"
 	}
 
@@ -59,7 +60,7 @@ project	"HGenX"
 	filter "configurations:Dist"
 		defines "HG_DIST"
 		runtime "Release"
-		symbols "On"		
+		optimize "On"			
 
 	project	"Sandbox"
 		location "Sandbox"
@@ -109,4 +110,4 @@ project	"HGenX"
 	filter "configurations:Dist"
 		defines "HG_DIST"
 		runtime "Release"
-		symbols "On"		
+		optimize "On"			
