@@ -143,12 +143,16 @@
     <ClInclude Include="src\HGenX\Core.h" />
     <ClInclude Include="src\HGenX\EntryPoint.h" />
     <ClInclude Include="src\HGenX\Events\Event.h" />
+    <ClInclude Include="src\HGenX\Events\KeyEvent.h" />
     <ClInclude Include="src\HGenX\Log.h" />
     <ClInclude Include="src\HGenx.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\HGenX\Application.cpp" />
     <ClCompile Include="src\HGenX\Log.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

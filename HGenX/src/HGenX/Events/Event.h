@@ -32,6 +32,8 @@ namespace HGenx
 		EventCategoryMouseButton = BIT(4)
 	};
 
+
+
 #define EVENT_CLASS_TYPE(type) static  EventType GetStaticType() {return EventType::##type;}\
                                virtual EventType GetEventType() const override {return GetStaticType();}\
                                virtual const char* GetName() const override { return #type; }
@@ -44,7 +46,7 @@ namespace HGenx
 	{
 		// friend class EventDispatcher;		// not used in the current version; not neccessary m_Handled is changed to public
 	public:
-		bool m_Handled{ false };				// revise to public from private(older version; on the youtube videos)
+		bool m_Handled{ false };				// revised to public from private(older version; on the youtube videos)
 
 		virtual EventType GetEventType()			const = 0;
 		virtual const char* GetName()				const = 0;
@@ -52,7 +54,7 @@ namespace HGenx
 		virtual int GetCategoryFlags()				const = 0;
 		virtual std::string ToString() const { return GetName(); }
 
-		bool IsInCategory(EventCategory category){return GetCategoryFlags() & category;}	// the warning is to use enum class instead enum; no compiler error but might bugs
+		bool IsInCategory(EventCategory category){return GetCategoryFlags() & category;}	// the warning is to use enum class instead enum; no compiler error but might CAUSE bugs
 	};
 
 	class EventDispatcher

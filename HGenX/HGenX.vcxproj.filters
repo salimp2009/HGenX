@@ -20,6 +20,7 @@
     </ClInclude>
     <ClInclude Include="src\HGenx.h" />
     <ClInclude Include="src\HGenX\Events\Event.h" />
+    <ClInclude Include="src\HGenX\Events\KeyEvent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\HGenX\Application.cpp">
@@ -28,5 +29,8 @@
     <ClCompile Include="src\HGenX\Log.cpp">
       <Filter>HGenX</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
   </ItemGroup>
 </Project>
