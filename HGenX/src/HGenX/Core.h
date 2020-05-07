@@ -11,7 +11,5 @@
 #else
 	#error HGenX only support Windows
 #endif 
-namespace HGenx { 
-#define BIT(x) (x<<1)
 
-}
+#define BIT(x) (1 << x)

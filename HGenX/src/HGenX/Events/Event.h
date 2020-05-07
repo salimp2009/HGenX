@@ -44,17 +44,19 @@ namespace HGenx
 	// will be refactored
 	class HGenX_API Event						
 	{
-		// friend class EventDispatcher;		// not used in the current version; not neccessary m_Handled is changed to public
+		//friend class EventDispatcher;		// not used in the current version; not neccessary m_Handled is changed to public
 	public:
-		bool m_Handled{ false };				// revised to public from private(older version; on the youtube videos)
+		bool Handled{ false };				// revised to public from private(older version; on the youtube videos)
 
 		virtual EventType GetEventType()			const = 0;
 		virtual const char* GetName()				const = 0;
-		virtual EventCategory GetEventCategory()	const = 0;	 // this function might be reduntant; removed in current version
 		virtual int GetCategoryFlags()				const = 0;
 		virtual std::string ToString() const { return GetName(); }
 
-		bool IsInCategory(EventCategory category){return GetCategoryFlags() & category;}	// the warning is to use enum class instead enum; no compiler error but might CAUSE bugs
+		inline bool IsInCategory(EventCategory category){return GetCategoryFlags() & category;}	// the warning is to use enum class instead enum; no compiler error but might CAUSE bugs
+
+	//protected:
+	//	bool Handled{ false };
 	};
 
 	class EventDispatcher
@@ -67,7 +69,7 @@ namespace HGenx
 	{
 		if (m_Event.GetEventType() == T::GetStaticType());
 		{
-			m_Event.m_Handled = func(static_cast<T&>(m_Event));
+			m_Event.Handled = func(static_cast<T&>(m_Event));
 			return true;
 		}
 		return false;

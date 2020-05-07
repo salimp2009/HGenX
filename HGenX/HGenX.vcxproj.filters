@@ -4,6 +4,9 @@
     <Filter Include="HGenX">
       <UniqueIdentifier>{7F8F3E0D-EBA3-66BE-B425-0A1E20F962EF}</UniqueIdentifier>
     </Filter>
+    <Filter Include="HGenX\Events">
+      <UniqueIdentifier>{83F685C1-6F59-1566-18DF-4D1C0421E1E8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\HGenX\Application.h">
@@ -15,12 +18,22 @@
     <ClInclude Include="src\HGenX\EntryPoint.h">
       <Filter>HGenX</Filter>
     </ClInclude>
+    <ClInclude Include="src\HGenX\Events\ApplicationEvent.h">
+      <Filter>HGenX\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\HGenX\Events\Event.h">
+      <Filter>HGenX\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\HGenX\Events\KeyEvent.h">
+      <Filter>HGenX\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\HGenX\Events\MouseEvent.h">
+      <Filter>HGenX\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\HGenX\Log.h">
       <Filter>HGenX</Filter>
     </ClInclude>
     <ClInclude Include="src\HGenx.h" />
-    <ClInclude Include="src\HGenX\Events\Event.h" />
-    <ClInclude Include="src\HGenX\Events\KeyEvent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\HGenX\Application.cpp">
@@ -29,8 +42,5 @@
     <ClCompile Include="src\HGenX\Log.cpp">
       <Filter>HGenX</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="cpp.hint" />
   </ItemGroup>
 </Project>
