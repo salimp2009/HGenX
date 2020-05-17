@@ -2,7 +2,6 @@
 
 #include "HGenX/Events/Event.h"
 
-#include <sstream>
 
 namespace HGenx
 {

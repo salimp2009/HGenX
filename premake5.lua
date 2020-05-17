@@ -19,6 +19,9 @@ project	"HGenX"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "hgpch.h"
+	pchsource "HGenX/src/hgpch.cpp"
+
 	files
 	{
 		"%{prj.name}/src/**.h",

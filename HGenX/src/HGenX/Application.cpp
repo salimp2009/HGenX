@@ -1,6 +1,10 @@
+#include "hgpch.h"
 #include "Application.h"
 #include "HGenX/Events/ApplicationEvent.h"
 #include "HGenX/Events/KeyEvent.h"
+#include "HGenX/Events/MouseEvent.h"
+
+
 
 
 namespace HGenx {
@@ -20,16 +24,22 @@ namespace HGenx {
 		Log::GetClientLogger()->set_level(spdlog::level::trace);
 
 		WindowResizeEvent e(1280,720);
-		//HG_TRACE(e);
+		KeyPressedEvent k(25, 5);
+		MouseButtonPressedEvent m(45);
 
-		if (e.IsInCategory(EventCategoryApplication))
+
+		if (e.IsInCategory(EventCategoryApplication) && k.IsInCategory(EventCategoryKeyboard) && m.IsInCategory(EventCategoryMouse))    
 		{
 			HG_TRACE(e);
+			HG_TRACE(k);
+			HG_TRACE(m);
 		}
 
 		if (e.IsInCategory(EventCategoryInput))
 		{
 			HG_TRACE(e);
+			HG_TRACE(k);
+			HG_TRACE(m);
 		}
 		
 		while (true);

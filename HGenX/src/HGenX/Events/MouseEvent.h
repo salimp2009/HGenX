@@ -1,7 +1,6 @@
 #pragma once
 
 #include "HGenx/Events/Event.h"
-#include <sstream>
 
 namespace HGenx {
 	class HGenX_API MouseMovedEvent : public Event
