@@ -35,6 +35,10 @@
     </ClInclude>
     <ClInclude Include="src\HGenx.h" />
     <ClInclude Include="src\hgpch.h" />
+    <ClInclude Include="src\HGenX\Window.h">
+      <Filter>HGenX</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\HGenX\Application.cpp">
@@ -44,5 +48,6 @@
       <Filter>HGenX</Filter>
     </ClCompile>
     <ClCompile Include="src\hgpch.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>

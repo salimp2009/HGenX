@@ -28,7 +28,7 @@ namespace HGenx {
 		MouseButtonPressedEvent m(45);
 
 
-		if (e.IsInCategory(EventCategoryApplication) && k.IsInCategory(EventCategoryKeyboard) && m.IsInCategory(EventCategoryMouse))    
+		if (e.IsInCategory(EventCategoryApplication) && k.IsInCategory(EventCategoryKeyboard) && m.IsInCategory(EventCategoryMouse))  
 		{
 			HG_TRACE(e);
 			HG_TRACE(k);
