@@ -36,7 +36,7 @@ namespace HGenx
 		virtual bool IsVSync() const		= 0;
 
 		static Window* Create(const WindowProps& props = WindowProps());
-		// static std::unique_ptr<Window> Create(const WindowProps& props = WindowProps());  // will be refactored later with using Scope=std::unique_ptr<T>
+		//static std::unique_ptr<Window> Create(const WindowProps& props = WindowProps());  // will be refactored later with using Scope=std::unique_ptr<T>
 	};
 
 
