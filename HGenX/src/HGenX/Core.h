@@ -36,6 +36,8 @@
 	#define HG_CORE_ASSERT(x, ...)
 #endif
 
+// #define BIND_EVENT_FN(x) std::bind(&Application::x, this, std::placeholders::_1) // TODO::include in Application.cpp but needs to be here 
+
 #define BIT(x) (1 << x)
 
 
