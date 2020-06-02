@@ -9,12 +9,10 @@
 
 namespace HGenx {
 
-#define BIND_EVENT_FN(x) std::bind(&Application::x, this, std::placeholders::_1)
-
 	Application::Application() 
 	{
 		m_Window =std::unique_ptr<Window>(Window::Create());
-		m_Window->SetEventCallback(BIND_EVENT_FN(OnEvent));
+		m_Window->SetEventCallback(HG_BIND_EVENT_FN(Application::OnEvent));
 	}
 	
 
@@ -26,7 +24,11 @@ namespace HGenx {
 	void Application::OnEvent(Event& e)
 	{
 		EventDispatcher dispatcher(e);
-		dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(OnWindowClose));
+		dispatcher.Dispatch<WindowCloseEvent>(HG_BIND_EVENT_FN(Application::OnWindowClose));
+		
+		// Alternative to std::bind
+		//auto f = [this](WindowCloseEvent& e) {  return OnWindowClose(e); };
+		//dispatcher.Dispatch<WindowCloseEvent>(f);
 		HG_CORE_TRACE("{0}", e);
 	}
 

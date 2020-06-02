@@ -39,6 +39,8 @@
       <Filter>HGenX</Filter>
     </ClInclude>
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
+    <ClInclude Include="src\HGenX\Layer.h" />
+    <ClInclude Include="src\HGenX\LayerStack.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\HGenX\Application.cpp">
@@ -49,5 +51,7 @@
     </ClCompile>
     <ClCompile Include="src\hgpch.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
+    <ClCompile Include="src\HGenX\Layer.cpp" />
+    <ClCompile Include="src\HGenX\LayerStack.cpp" />
   </ItemGroup>
 </Project>

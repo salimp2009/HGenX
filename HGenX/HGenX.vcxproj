@@ -156,6 +156,8 @@
     <ClInclude Include="src\HGenX\Events\Event.h" />
     <ClInclude Include="src\HGenX\Events\KeyEvent.h" />
     <ClInclude Include="src\HGenX\Events\MouseEvent.h" />
+    <ClInclude Include="src\HGenX\Layer.h" />
+    <ClInclude Include="src\HGenX\LayerStack.h" />
     <ClInclude Include="src\HGenX\Log.h" />
     <ClInclude Include="src\HGenx.h" />
     <ClInclude Include="src\hgpch.h" />
@@ -164,6 +166,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\HGenX\Application.cpp" />
+    <ClCompile Include="src\HGenX\Layer.cpp" />
+    <ClCompile Include="src\HGenX\LayerStack.cpp" />
     <ClCompile Include="src\HGenX\Log.cpp" />
     <ClCompile Include="src\hgpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
