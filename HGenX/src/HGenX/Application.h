@@ -1,9 +1,11 @@
 #pragma once
 #include "Core.h"
-#include "Log.h"
-#include "Events/Event.h"
+
+#include "HGenX/Window.h"
+#include "HGenX/LayerStack.h"
+#include "HGenX/Events/Event.h"
 #include "HGenX/Events/ApplicationEvent.h"
-#include "Window.h"
+
 
 
 namespace HGenx {
@@ -17,10 +19,15 @@ namespace HGenx {
 
 		void Run();
 		void OnEvent(Event& e);
+
+		void PushLayer(Layer* layer);
+		void PushOverLay(Layer* layer);
 	private:
 		bool OnWindowClose(WindowCloseEvent& e);
+		
 		std::unique_ptr<Window> m_Window;
 		bool m_Running{ true };
+		LayerStack m_LayerStack;
 	};
 
 	// To be defined in Client

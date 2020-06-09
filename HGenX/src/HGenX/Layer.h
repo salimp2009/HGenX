@@ -8,7 +8,7 @@ namespace HGenx {
 	class HGenX_API Layer
 	{
 	public:
-		Layer(std::string name = "Layer");
+		Layer(const std::string& name = "Layer");  // TODO: check if using std::move() will be OK
 		virtual ~Layer() = default;
 
 		virtual void OnAttach() {}

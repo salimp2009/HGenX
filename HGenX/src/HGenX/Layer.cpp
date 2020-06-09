@@ -5,13 +5,10 @@
 
 namespace HGenx {
 
-	Layer::Layer(std::string debugname) : m_DebugName{std::move(debugname)}  // TODO: check if std::move() is OK
+	Layer::Layer(const std::string& debugname) : m_DebugName{debugname}  // TODO: check if std::move() is OK to use
 	{
 
 	}
-
-
-
 
 }
 

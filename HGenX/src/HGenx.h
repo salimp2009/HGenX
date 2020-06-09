@@ -5,6 +5,7 @@
 
 
 #include "HGenX/Application.h"
+#include "HGenX/Layer.h"
 #include "HGenX/Log.h"
 //------Entry Point--------------------
 #include "HGenX/EntryPoint.h"

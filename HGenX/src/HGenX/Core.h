@@ -36,7 +36,7 @@
 	#define HG_CORE_ASSERT(x, ...)
 #endif
 
-#define HG_BIND_EVENT_FN(fn) std::bind(&fn, this, std::placeholders::_1) // included in the recent code ; differes from video
+#define HG_BIND_EVENT_FN(fn) std::bind(&fn, this, std::placeholders::_1) // TODO:: change to lambda included in the recent code ; differes from video
 #define BIT(x) (1 << x)
 
 

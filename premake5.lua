@@ -66,16 +66,19 @@ project	"HGenX"
 
 	filter "configurations:Debug"
 		defines "HG_DEBUG"
+		buildoptions "/MDd"
 		runtime "Debug"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "HG_RELEASE"
+		buildoptions "/MD"
 		runtime "Release"
 		optimize "On"	
 
 	filter "configurations:Dist"
 		defines "HG_DIST"
+		buildoptions "/MD"
 		runtime "Release"
 		optimize "On"			
 
@@ -116,15 +119,18 @@ project	"HGenX"
 
 	filter "configurations:Debug"
 		defines "HG_DEBUG"
+		buildoptions "/MDd"
 		runtime "Debug"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "HG_RELEASE"
+		buildoptions "/MD"
 		runtime "Release"
 		optimize "On"	
 
 	filter "configurations:Dist"
 		defines "HG_DIST"
+		buildoptions "/MD"
 		runtime "Release"
 		optimize "On"			
