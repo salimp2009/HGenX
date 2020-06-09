@@ -14,8 +14,9 @@
 *.userprefs
 
 #bin files
-bin-int/
+**/bin/
 !vendor/bin/premake/
+bin-int/
 
 # Build results
 [Dd]ebug/
