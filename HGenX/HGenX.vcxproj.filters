@@ -7,6 +7,12 @@
     <Filter Include="HGenX\Events">
       <UniqueIdentifier>{83F685C1-6F59-1566-18DF-4D1C0421E1E8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\HGenX\Application.h">
@@ -30,28 +36,40 @@
     <ClInclude Include="src\HGenX\Events\MouseEvent.h">
       <Filter>HGenX\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\HGenX\Layer.h">
+      <Filter>HGenX</Filter>
+    </ClInclude>
+    <ClInclude Include="src\HGenX\LayerStack.h">
+      <Filter>HGenX</Filter>
+    </ClInclude>
     <ClInclude Include="src\HGenX\Log.h">
       <Filter>HGenX</Filter>
     </ClInclude>
-    <ClInclude Include="src\HGenx.h" />
-    <ClInclude Include="src\hgpch.h" />
     <ClInclude Include="src\HGenX\Window.h">
       <Filter>HGenX</Filter>
     </ClInclude>
-    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
-    <ClInclude Include="src\HGenX\Layer.h" />
-    <ClInclude Include="src\HGenX\LayerStack.h" />
+    <ClInclude Include="src\HGenx.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\hgpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\HGenX\Application.cpp">
       <Filter>HGenX</Filter>
     </ClCompile>
+    <ClCompile Include="src\HGenX\Layer.cpp">
+      <Filter>HGenX</Filter>
+    </ClCompile>
+    <ClCompile Include="src\HGenX\LayerStack.cpp">
+      <Filter>HGenX</Filter>
+    </ClCompile>
     <ClCompile Include="src\HGenX\Log.cpp">
       <Filter>HGenX</Filter>
     </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
     <ClCompile Include="src\hgpch.cpp" />
-    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
-    <ClCompile Include="src\HGenX\Layer.cpp" />
-    <ClCompile Include="src\HGenX\LayerStack.cpp" />
   </ItemGroup>
 </Project>

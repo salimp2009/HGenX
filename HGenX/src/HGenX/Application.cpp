@@ -5,7 +5,7 @@
 #include "HGenX/Events/KeyEvent.h"
 #include "HGenX/Events/MouseEvent.h"
 
-#include <GLFW/glfw3.h>
+#include <glad/glad.h>
 
 
 
@@ -56,6 +56,7 @@ namespace HGenx {
 	
 		while (m_Running)
 		{
+		
 			glClearColor(1.0f, 0.0f, 1.0, 1.0f);
 			glClear(GL_COLOR_BUFFER_BIT);
 
