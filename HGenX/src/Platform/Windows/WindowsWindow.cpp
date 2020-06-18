@@ -7,7 +7,7 @@
 #include "HGenX/Events/KeyEvent.h"
 
 #include <glad/glad.h>
-//
+
 namespace HGenx
 {
 	
@@ -34,7 +34,7 @@ namespace HGenx
 		Shutdown();
 	}
 
-	void WindowsWindow::Init(const WindowProps& props)
+void WindowsWindow::Init(const WindowProps& props)
 	{
 		m_Data.Title = props.Title;
 		m_Data.Width = props.Width;
