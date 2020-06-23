@@ -11,8 +11,12 @@
 
 namespace HGenx {
 
+	Application* Application::s_Instance = nullptr;
+
 	Application::Application() 
 	{
+		HG_CORE_ASSERT(!s_Instance, "Application already exists!");
+		s_Instance = this;
 		m_Window =std::unique_ptr<Window>(Window::Create());
 		m_Window->SetEventCallback(HG_BIND_EVENT_FN(Application::OnEvent));
 	}
@@ -26,12 +30,14 @@ namespace HGenx {
 	void Application::PushLayer(Layer* layer)
 	{
 		m_LayerStack.PushLayer(layer);
+		layer->OnAttach();
 	}
 
 
 	void Application::PushOverLay(Layer* layer)
 	{
 		m_LayerStack.PushOverLay(layer);
+		layer->OnAttach();
 	}
 
 	void Application::OnEvent(Event& e)
@@ -43,7 +49,7 @@ namespace HGenx {
 		//auto f = [this](WindowCloseEvent& e) {  return OnWindowClose(e); };
 		//dispatcher.Dispatch<WindowCloseEvent>(f);
 		HG_CORE_TRACE("{0}", e);
-		for (auto it = m_LayerStack.rbegin(); it != m_LayerStack.rend(); ++it )
+		for (auto it = m_LayerStack.rbegin(); it != m_LayerStack.rend(); ++it)
 		{
 			(*it)->OnEvent(e);
 			if (e.Handled)

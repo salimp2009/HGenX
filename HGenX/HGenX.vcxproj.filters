@@ -7,6 +7,9 @@
     <Filter Include="HGenX\Events">
       <UniqueIdentifier>{83F685C1-6F59-1566-18DF-4D1C0421E1E8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="HGenX\ImGui">
+      <UniqueIdentifier>{E967DAEE-551D-53E4-DE11-4DBB4AC649E8}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Platform">
       <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
     </Filter>
@@ -36,6 +39,9 @@
     <ClInclude Include="src\HGenX\Events\MouseEvent.h">
       <Filter>HGenX\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\HGenX\ImGui\ImGuiLayer.h">
+      <Filter>HGenX\ImGui</Filter>
+    </ClInclude>
     <ClInclude Include="src\HGenX\Layer.h">
       <Filter>HGenX</Filter>
     </ClInclude>
@@ -53,11 +59,14 @@
       <Filter>Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\hgpch.h" />
-    <ClInclude Include="src\HGenX\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\HGenX\Application.cpp">
       <Filter>HGenX</Filter>
+    </ClCompile>
+    <ClCompile Include="src\HGenX\ImGui\ImGuiLayer.cpp">
+      <Filter>HGenX\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="src\HGenX\Layer.cpp">
       <Filter>HGenX</Filter>
@@ -72,6 +81,6 @@
       <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\hgpch.cpp" />
-    <ClCompile Include="src\HGenX\ImGui\ImGuiLayer.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
   </ItemGroup>
 </Project>

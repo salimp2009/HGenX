@@ -123,7 +123,7 @@ project	"HGenX"
 
 	defines
 	{
-		"HG_PLATFORM_WINDOWS",
+		"HG_PLATFORM_WINDOWS"
 	}
 
 	filter "configurations:Debug"

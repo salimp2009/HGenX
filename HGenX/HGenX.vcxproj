@@ -165,6 +165,7 @@
     <ClInclude Include="src\HGenX\Log.h" />
     <ClInclude Include="src\HGenX\Window.h" />
     <ClInclude Include="src\HGenx.h" />
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\hgpch.h" />
   </ItemGroup>
@@ -174,6 +175,7 @@
     <ClCompile Include="src\HGenX\Layer.cpp" />
     <ClCompile Include="src\HGenX\LayerStack.cpp" />
     <ClCompile Include="src\HGenX\Log.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\hgpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
