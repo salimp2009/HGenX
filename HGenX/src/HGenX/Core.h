@@ -36,7 +36,10 @@
 	#define HG_CORE_ASSERT(x, ...)
 #endif
 
-#define HG_BIND_EVENT_FN(fn) std::bind(&fn, this, std::placeholders::_1) // TODO:: change to lambda included in the recent code ; differes from video
+#define HG_BIND_EVENT_FN(fn)   [this](auto& x) {return fn(x);}			   // revised std::bind to lambda
+//#define HG_BIND_EVENT_FN(fn) std::bind(&fn, this, std::placeholders::_1) // Original version from youtube
+#define HG_LAMBDA_EVENT_FN(fn) [this](auto& x) {return fn(x);}
+
 #define BIT(x) (1 << x)
 
 

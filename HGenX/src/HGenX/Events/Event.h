@@ -51,7 +51,7 @@ namespace HGenx
 		virtual int GetCategoryFlags()				const = 0;
 		virtual std::string ToString() const { return GetName(); }
 
-		inline bool IsInCategory(EventCategory category) // the warning is to use enum class instead enum; no compiler error but might CAUSE bugs
+		inline bool IsInCategory(EventCategory category) // the warning is to use enum class instead enum;
 		{
 			return GetCategoryFlags() & category;
 		}
