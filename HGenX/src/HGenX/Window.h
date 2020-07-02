@@ -34,6 +34,7 @@ namespace HGenx
 		virtual void SetEventCallback(const EventCallbackFn& callback) = 0;
 		virtual void SetVSync(bool enabled) = 0;
 		virtual bool IsVSync() const		= 0;
+		virtual void* GetNativeWindow() const = 0;
 
 		static Window* Create(const WindowProps& props = WindowProps());
 		//static std::unique_ptr<Window> Create(const WindowProps& props = WindowProps());  // will be refactored later with using Scope=std::unique_ptr<T>

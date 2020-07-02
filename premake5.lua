@@ -26,6 +26,7 @@ project	"HGenX"
 	location "HGenX"
 	kind "SharedLib"
 	language "C++"
+	staticruntime "off"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -57,8 +58,7 @@ project	"HGenX"
 	}
 
 	filter "system:windows"
-		cppdialect "C++17"
-		staticruntime "On"		
+		cppdialect "C++17"	
 		systemversion "latest"
 
 	defines
@@ -70,24 +70,21 @@ project	"HGenX"
 
 	postbuildcommands
 	{
-		("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
+		("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/Sandbox/\"")
 	}
 
 	filter "configurations:Debug"
 		defines "HG_DEBUG"
-		buildoptions "/MDd"
 		runtime "Debug"
 		symbols "on"
 
 	filter "configurations:Release"
 		defines "HG_RELEASE"
-		buildoptions "/MD"
 		runtime "Release"
 		optimize "on"	
 
 	filter "configurations:Dist"
 		defines "HG_DIST"
-		buildoptions "/MD"
 		runtime "Release"
 		optimize "on"			
 
@@ -96,7 +93,7 @@ project	"HGenX"
 		kind "ConsoleApp"
 		language "C++"
 		cppdialect "C++17"
-		staticruntime "on"
+		staticruntime "off"
 
 		targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 		objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -119,7 +116,7 @@ project	"HGenX"
 	}
 
 	filter "system:windows"	
-		systemversion "latest"
+	systemversion "latest"
 
 	defines
 	{
@@ -128,18 +125,15 @@ project	"HGenX"
 
 	filter "configurations:Debug"
 		defines "HG_DEBUG"
-		buildoptions "/MDd"
 		runtime "Debug"
 		symbols "on"
 
 	filter "configurations:Release"
 		defines "HG_RELEASE"
-		buildoptions "/MD"
 		runtime "Release"
 		optimize "on"	
 
 	filter "configurations:Dist"
 		defines "HG_DIST"
-		buildoptions "/MD"
 		runtime "Release"
 		optimize "on"			

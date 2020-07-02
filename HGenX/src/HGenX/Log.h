@@ -5,9 +5,6 @@
 #include "spdlog/fmt/ostr.h"
 
 
-// revised gitignore 
-
-
 namespace HGenx {
 	class HGenX_API Log
 	{

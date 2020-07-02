@@ -172,10 +172,10 @@ void WindowsWindow::Init(const WindowProps& props)
 
 	bool WindowsWindow::IsVSync() const
 	{
-
 		return true;
 	}
 
+	
 	
 
 

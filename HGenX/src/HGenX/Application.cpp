@@ -4,10 +4,9 @@
 #include "HGenX/Log.h"
 #include "HGenX/Events/KeyEvent.h"
 #include "HGenX/Events/MouseEvent.h"
+#include "HGenX/Input.h"
 
 #include <glad/glad.h>
-
-
 
 namespace HGenx {
 
@@ -59,7 +58,6 @@ namespace HGenx {
 
 	void Application::Run()
 	{
-	
 		while (m_Running)
 		{
 		
@@ -68,6 +66,9 @@ namespace HGenx {
 
 			for (Layer* layer : m_LayerStack)
 				layer->OnUpdate();
+
+			auto[x, y] = Input::GetMousePosition();
+			HG_CORE_TRACE("{0}, {1}", x, y);
 
 			m_Window->OnUpdate();
 		}
