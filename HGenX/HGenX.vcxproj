@@ -161,9 +161,11 @@
     <ClInclude Include="src\HGenX\Events\MouseEvent.h" />
     <ClInclude Include="src\HGenX\ImGui\ImGuiLayer.h" />
     <ClInclude Include="src\HGenX\Input.h" />
+    <ClInclude Include="src\HGenX\KeyCodes.h" />
     <ClInclude Include="src\HGenX\Layer.h" />
     <ClInclude Include="src\HGenX\LayerStack.h" />
     <ClInclude Include="src\HGenX\Log.h" />
+    <ClInclude Include="src\HGenX\MouseButtonCodes.h" />
     <ClInclude Include="src\HGenX\Window.h" />
     <ClInclude Include="src\HGenx.h" />
     <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
