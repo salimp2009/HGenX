@@ -4,7 +4,9 @@
 class ExampleLayer :public HGenx::Layer
 {
 public:
-    ExampleLayer(): Layer{"Example"} {}
+    ExampleLayer(): Layer{"Example"} 
+    {
+    }
 
     void OnUpdate() override
     {
@@ -24,9 +26,7 @@ public:
             HGenx::KeyPressedEvent& e = (HGenx::KeyPressedEvent&)event;
             HG_TRACE("Keypressed is {0}", (char)e.GetKeyCode());
         }
-            
-            
-        
+   
         //HG_TRACE("{0}", event);
     }
 
