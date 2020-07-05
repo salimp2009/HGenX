@@ -107,7 +107,8 @@ project	"HGenX"
 	includedirs
 	{
 		"HGenX/vendor/spdlog/include",
-		"HGenX/src"
+		"HGenX/src",
+		"HGenX/vendor"
 	}
 
 	links
