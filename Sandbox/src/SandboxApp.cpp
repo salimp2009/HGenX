@@ -1,6 +1,5 @@
 
 #include <HGenx.h>
-//#include "HGenX/EntryPoint.h"
 
 class ExampleLayer :public HGenx::Layer
 {
