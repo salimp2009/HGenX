@@ -7,3 +7,6 @@
 [submodule "HGenX/vendor/imgui"]
 	path = HGenX/vendor/imgui
 	url = https://github.com/salimp2009/imgui
+[submodule "HGenX/vendor/glm"]
+	path = HGenX/vendor/glm
+	url = https://github.com/g-truc/glm
