@@ -10,7 +10,7 @@ project "Glad"
 	{
 		"include/glad/glad.h",
 		"include/KHR/khrplatform.h",
-		"src/glad.c",
+		"src/glad.c"
 	}
 
 	includedirs
@@ -21,11 +21,5 @@ project "Glad"
 	filter "system:windows"
 		systemversion "latest"
 
-	filter "configurations:Debug"
-		runtime "Debug"
-		symbols "on"
-
-	filter "configurations:Release"
-		buildoptions "/MT"
-		runtime "Release"
-		optimize "on"
+  filter { "system:windows", "configurations:Release" }
+        buildoptions "/MT"
