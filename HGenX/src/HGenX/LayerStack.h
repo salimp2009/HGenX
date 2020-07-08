@@ -31,8 +31,7 @@ namespace HGenx {
 
 	private:
 		std::vector<Layer*> m_Layers;
-		//std::vector<Layer*>::iterator m_LayerInsert;	// TODO : DELETE; replaced by m_LayerInsertIndex in current version
-		unsigned int m_LayerInsertIndex{0};				// TODO : to be included instead of m_LayerInsert in current version
+		unsigned int m_LayerInsertIndex{0};
 	};
 
 }

@@ -6,6 +6,8 @@
 #include "HGenX/Events/Event.h"
 #include "HGenX/Events/ApplicationEvent.h"
 
+#include "HGenX/ImGui/ImGuiLayer.h"
+
 
 
 namespace HGenx {
@@ -28,7 +30,7 @@ namespace HGenx {
 
 	private:
 		bool OnWindowClose(WindowCloseEvent& e);
-		
+		ImGuiLayer* m_ImGuiLayer;						// Unique_ptr was used in video but revised to raw pointer !!
 		std::unique_ptr<Window> m_Window;
 		bool m_Running{ true };
 		LayerStack m_LayerStack;

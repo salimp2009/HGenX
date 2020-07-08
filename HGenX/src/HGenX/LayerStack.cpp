@@ -15,7 +15,7 @@ namespace HGenx {
 	void LayerStack::PushLayer(Layer* layer)
 	{
 		m_Layers.emplace(m_Layers.begin() + m_LayerInsertIndex, layer);
-		m_LayerInsertIndex++;								// TODO : check if ++m_LayerInsertIndex; is better
+		m_LayerInsertIndex++;								
 	}
 	
 	void LayerStack::PushOverLay(Layer* overlay)
@@ -30,7 +30,7 @@ namespace HGenx {
 		{
 			layer->OnDetach();								// TODO : check not to cause error; in current version; not in video 
 			m_Layers.erase(it);
-			m_LayerInsertIndex--;							// TODO : check if --m_LayerInsertIndex; is better
+			m_LayerInsertIndex--;							
 		}
 	}
 
