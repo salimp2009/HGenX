@@ -21,6 +21,10 @@ namespace HGenx {
 
 		m_ImGuiLayer = new ImGuiLayer();
 		PushOverLay(m_ImGuiLayer);
+
+		// Alternative way using instead of raw pointer
+		//m_ImGuiLayer = std::make_unique<ImGuiLayer>();
+		//PushOverLay(m_ImGuiLayer.get());
 	}
 	
 

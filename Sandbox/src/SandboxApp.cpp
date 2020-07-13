@@ -1,5 +1,8 @@
 
 #include <HGenx.h>
+//#include "HGenX/Application.h"
+#include <imgui/imgui.h>
+
 
 class ExampleLayer :public HGenx::Layer
 {
@@ -8,7 +11,7 @@ public:
     {
     }
 
-    void OnUpdate() override
+    virtual void OnUpdate() override
     {
        // HG_INFO("ExampleLayer::Update");
 
@@ -19,7 +22,19 @@ public:
             
     }
 
-    void OnEvent(HGenx::Event& event) override
+    virtual void OnImGuiRender() override
+    {
+        // HomeWork Question : How to get rid of the linking error if below is included; compiles ok but cannot link
+        // Solution FOR DDL; Add IMGUI_API=__declspec(dllexport); in Hazel Preprocessor definition also in ImGui 
+        // Also add to SandBox to import IMGUI_API=__declspec(dllimport); Doing this enables Hazel to get 
+        // this loaded from ImGui since Hazel is a DLL library and Sandbox will get it thru Hazel
+        // Not NEEDED FOR STATIC LIBRARY Version of Hazel
+        ImGui::Begin("Test");
+        ImGui::Text("Hello HGenx World of Wonders");
+        ImGui::End();
+    }
+
+    virtual void OnEvent(HGenx::Event& event) override
     {
         if (event.GetEventType() == HGenx::EventType::KeyPressed)
         {

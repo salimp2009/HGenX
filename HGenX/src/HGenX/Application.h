@@ -8,8 +8,6 @@
 
 #include "HGenX/ImGui/ImGuiLayer.h"
 
-
-
 namespace HGenx {
 
 	class HGenX_API Application
@@ -27,10 +25,12 @@ namespace HGenx {
 
 		static Application& Get() { return *s_Instance; }
 		Window& GetWindow() { return *m_Window; }
+		ImGuiLayer& GetImGui() { return *m_ImGuiLayer; }
 
 	private:
 		bool OnWindowClose(WindowCloseEvent& e);
-		ImGuiLayer* m_ImGuiLayer;						// Unique_ptr was used in video but revised to raw pointer !!
+		ImGuiLayer* m_ImGuiLayer;					
+		//std::unique_ptr<ImGuiLayer>m_ImGuiLayer;				// Alternative implemantantion by Salim	
 		std::unique_ptr<Window> m_Window;
 		bool m_Running{ true };
 		LayerStack m_LayerStack;
