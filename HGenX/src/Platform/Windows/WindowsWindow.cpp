@@ -1,12 +1,11 @@
 #include "hgpch.h"
 
 #include "Platform/Windows/WindowsWindow.h"
+#include "Platform/OpenGL/OpenGLContext.h"
 
 #include "HGenX/Events/ApplicationEvent.h"
 #include "HGenX/Events/MouseEvent.h"
 #include "HGenX/Events/KeyEvent.h"
-
-#include <glad/glad.h>
 
 namespace HGenx
 {
@@ -41,6 +40,7 @@ void WindowsWindow::Init(const WindowProps& props)
 
 		HG_CORE_INFO("Creating window {0} ({1}, {2})", props.Title, props.Width, props.Height);
 
+
 		if (!s_GLFWInitialized)
 		{
 			// TODO:glfwTerminate on system shutdown
@@ -51,9 +51,10 @@ void WindowsWindow::Init(const WindowProps& props)
 		}
 
 		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
-		glfwMakeContextCurrent(m_Window);
- 		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
-		HG_CORE_ASSERT(status, "Could not initialize GLFW!");
+		
+		m_Context = new OpenGLContext(m_Window);
+		m_Context->Init(); // Below lines will be in this function
+		
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 
@@ -157,7 +158,7 @@ void WindowsWindow::Init(const WindowProps& props)
 	void  WindowsWindow::OnUpdate()
 	{
 		glfwPollEvents();
-		glfwSwapBuffers(m_Window);
+		m_Context->SwapBuffers();
 	}
 
 	void WindowsWindow::SetVSync(bool enabled)

@@ -42,8 +42,9 @@
 
 //#define HG_BIND_EVENT_FN(fn) [this](auto& x) {return fn(x);}			     // revised std::bind to lambda...1st version
 //#define HG_BIND_EVENT_FN(fn) std::bind(&fn, this, std::placeholders::_1)   // Original version from youtube; DELETE THIS
-#define HG_BIND_EVENT_FN(fn) [this](auto&&... x) ->decltype(fn(std::forward<decltype(x)>(x)...)){return fn(std::forward<decltype(x)>(x)...);}  // Salim version
-//#define HG_BIND_EVENT_FN(fn) [this](auto&&... x) ->decltype(auto){return fn(std::forward<decltype(x)>(x)...);}							   // hazel commit version
+//#define HG_BIND_EVENT_FN(fn) [this](auto&&... x) ->decltype(fn(std::forward<decltype(x)>(x)...)){return fn(std::forward<decltype(x)>(x)...);}  // TOCHECK; Salim version; works ok but gives intellisense error; in Application.cpp SetEventCallback(HG_BIND_EVENT_FN(Application::OnEvent));
+#define HG_BIND_EVENT_FN(fn) [this](auto&&... x) ->decltype(auto){return fn(std::forward<decltype(x)>(x)...);}							   // hazel commit version
+//#define HG_BIND_EVENT_FN(fn) [this](auto&&... x) {return fn(std::forward<decltype(x)>(x)...);}							  
 
 #define BIT(x) (1 << x)
 
