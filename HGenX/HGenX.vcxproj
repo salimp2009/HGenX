@@ -155,6 +155,7 @@
     <ClInclude Include="src\HGenX\Log.h" />
     <ClInclude Include="src\HGenX\MouseButtonCodes.h" />
     <ClInclude Include="src\HGenX\Renderer\GraphicsContext.h" />
+    <ClInclude Include="src\HGenX\Renderer\Shader.h" />
     <ClInclude Include="src\HGenX\Window.h" />
     <ClInclude Include="src\HGenx.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h" />
@@ -577,6 +578,7 @@
     <ClCompile Include="src\HGenX\Layer.cpp" />
     <ClCompile Include="src\HGenX\LayerStack.cpp" />
     <ClCompile Include="src\HGenX\Log.cpp" />
+    <ClCompile Include="src\HGenX\Renderer\Shader.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />

@@ -1,12 +1,13 @@
 #pragma once
 #include "Core.h"
 
-#include "HGenX/Window.h"
+#include "Window.h"
 #include "HGenX/LayerStack.h"
 #include "HGenX/Events/Event.h"
 #include "HGenX/Events/ApplicationEvent.h"
 
 #include "HGenX/ImGui/ImGuiLayer.h"
+#include "HGenX/Renderer/Shader.h"
 
 namespace HGenx {
 
@@ -36,6 +37,7 @@ namespace HGenx {
 		LayerStack m_LayerStack;
 
 		unsigned int m_VertexArray, m_VertexBuffer, m_IndexBuffer;
+		std::unique_ptr<Shader>m_Shader;
 	private:
 		static Application* s_Instance;
 	};
