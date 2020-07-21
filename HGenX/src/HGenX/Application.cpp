@@ -22,12 +22,8 @@ namespace HGenx {
 		m_ImGuiLayer = new ImGuiLayer();
 		PushOverLay(m_ImGuiLayer);
 
-		// TODO: Complete the below ;
 		glGenVertexArrays(1, &m_VertexArray);
 		glBindVertexArray(m_VertexArray);
-
-		glGenBuffers(1, &m_VertexBuffer);
-		glBindBuffer(GL_ARRAY_BUFFER, m_VertexBuffer);
 
 		float vertices[3 * 3] = {
 			-0.5f, -0.5f, 0.0f,
@@ -35,8 +31,7 @@ namespace HGenx {
 			 0.0f,  0.5f, 0.0f
 		};
 
-		// Upload vertices from CPU to GPU;
-		glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+		m_VertexBuffer.reset(VertexBuffer::Create(vertices, sizeof(vertices)));
 
 		glEnableVertexAttribArray(0);
 		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), nullptr);
@@ -57,7 +52,7 @@ namespace HGenx {
 			void main()
 			{
 				v_Position=a_Position;
-				gl_Position=vec4(a_Position, 1.0);
+				gl_Position=vec4(a_Position , 1.0);
 			}
 		)";
 

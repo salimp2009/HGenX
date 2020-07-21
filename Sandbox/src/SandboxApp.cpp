@@ -1,4 +1,3 @@
-
 #include <HGenx.h>
 //#include "HGenX/Application.h"
 #include <imgui/imgui.h>

@@ -15,7 +15,7 @@ namespace HGenx {
 		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
 		HG_CORE_ASSERT(status, "Could not initialize GLFW!");
 
-		HG_CORE_INFO("OpenGL GPU INFO:");  // GPU Vender and model info 
+		HG_CORE_INFO("OpenGL GPU INFO:");  // GPU Vendor and model info 
 		HG_CORE_INFO("	Vendor: {0}", glGetString(GL_VENDOR));
 		HG_CORE_INFO("	Renderer: {0}", glGetString(GL_RENDERER));
 		HG_CORE_INFO("	Version: {0}", glGetString(GL_VERSION));

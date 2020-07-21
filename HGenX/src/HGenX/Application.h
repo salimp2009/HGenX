@@ -8,6 +8,7 @@
 
 #include "HGenX/ImGui/ImGuiLayer.h"
 #include "HGenX/Renderer/Shader.h"
+#include "HGenX/Renderer/Buffer.h"
 
 namespace HGenx {
 
@@ -30,14 +31,16 @@ namespace HGenx {
 
 	private:
 		bool OnWindowClose(WindowCloseEvent& e);
+
+		std::unique_ptr<Window> m_Window;
 		ImGuiLayer* m_ImGuiLayer;					
 		//std::unique_ptr<ImGuiLayer>m_ImGuiLayer;				// Alternative implemantantion by Salim	
-		std::unique_ptr<Window> m_Window;
 		bool m_Running{ true };
 		LayerStack m_LayerStack;
 
-		unsigned int m_VertexArray, m_VertexBuffer, m_IndexBuffer;
+		unsigned int m_VertexArray, m_IndexBuffer;
 		std::unique_ptr<Shader>m_Shader;
+		std::unique_ptr<VertexBuffer>m_VertexBuffer;
 	private:
 		static Application* s_Instance;
 	};
