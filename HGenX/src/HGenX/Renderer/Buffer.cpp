@@ -12,7 +12,7 @@ namespace HGenx {
 		{
 			case RendererAPI::None:		HG_CORE_ASSERT(false, "RendererAPI::None is currently not supported"); return nullptr;
 			case RendererAPI::OpenGL:	return new OpenGLVertexBuffer(vertices, size);
-			//case RendererAPI::OpenGL:	return CreateRef<OpenGLVertexBuffer>(vertices, size);
+			//case RendererAPI::OpenGL:	return CreateRef<OpenGLVertexBuffer>(vertices, size);  // NOTE: if used change the return type Ref<VertexBuffer>
 		}
 		
 		HG_CORE_ASSERT(false, "Unknown RendererAPI!");
@@ -25,7 +25,7 @@ namespace HGenx {
 		{
 			case RendererAPI::None:		HG_CORE_ASSERT(false, "RendererAPI::None is currently not supported"); return nullptr;
 			case RendererAPI::OpenGL:	return new OpenGLIndexBuffer(indices, count);
-			//case RendererAPI::OpenGL:	return CreateRef<OpenGLIndexBuffer>(indices, count);
+			//case RendererAPI::OpenGL:	return CreateRef<OpenGLIndexBuffer>(indices, count); // NOTE: if used change the return type Ref<IndexBuffer>
 		}
 
 		HG_CORE_ASSERT(false, "Unknown RendererAPI!");
