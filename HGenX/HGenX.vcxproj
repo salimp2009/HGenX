@@ -158,10 +158,12 @@
     <ClInclude Include="src\HGenX\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\HGenX\Renderer\Renderer.h" />
     <ClInclude Include="src\HGenX\Renderer\Shader.h" />
+    <ClInclude Include="src\HGenX\Renderer\VertexArray.h" />
     <ClInclude Include="src\HGenX\Window.h" />
     <ClInclude Include="src\HGenx.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLBuffer.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h" />
+    <ClInclude Include="src\Platform\OpenGL\OpenGLVertexArray.h" />
     <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\hgpch.h" />
@@ -584,8 +586,10 @@
     <ClCompile Include="src\HGenX\Renderer\Buffer.cpp" />
     <ClCompile Include="src\HGenX\Renderer\Renderer.cpp" />
     <ClCompile Include="src\HGenX\Renderer\Shader.cpp" />
+    <ClCompile Include="src\HGenX\Renderer\VertexArray.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\OpenGLVertexArray.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\hgpch.cpp">

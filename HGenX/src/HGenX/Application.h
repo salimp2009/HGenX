@@ -9,6 +9,7 @@
 #include "HGenX/ImGui/ImGuiLayer.h"
 #include "HGenX/Renderer/Shader.h"
 #include "HGenX/Renderer/Buffer.h"
+#include "HGenX/Renderer/VertexArray.h"
 
 namespace HGenx {
 
@@ -38,10 +39,12 @@ namespace HGenx {
 		bool m_Running{ true };
 		LayerStack m_LayerStack;
 
-		unsigned int m_VertexArray;
-		std::unique_ptr<Shader>m_Shader;
-		std::unique_ptr<VertexBuffer>m_VertexBuffer;
-		std::unique_ptr<IndexBuffer>m_IndexBuffer;
+		//unsigned int m_VertexArray; // TODO: Delete
+		std::shared_ptr<Shader>m_Shader;
+		std::shared_ptr<VertexArray>m_VertexArray;
+		std::shared_ptr<VertexBuffer>m_VertexBuffer;
+		std::shared_ptr<IndexBuffer>m_IndexBuffer;
+		
 	private:
 		static Application* s_Instance;
 	};
